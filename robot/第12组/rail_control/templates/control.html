@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>车库控制系统</title>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <style type="text/css">
+
+        #header {
+            
+            color:black;
+            
+            text-align:center;
+
+            font-family: Microsoft JhengHei;
+            
+            padding: 10px;
+
+        }
+
+        h1 {
+
+            font-size: 40px;
+
+        }
+
+        #raiseup{
+
+            margin-top: 50px;
+
+        }
+
+        #putdown{
+
+            margin-top: 30px;
+
+            margin-bottom: 50px;
+
+        }
+
+        .btn{
+
+            background: #00ba8b;
+            width: 430px;
+            height: 60px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+    </style>
+
+    <script>
+
+        $(function(){
+
+            $("button").click(function(){
+
+                $.post("/cmd",this.id,function(data,status){});
+
+            });
+
+        });
+
+ 
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="header">
+
+    <h1>车库控制系统</h1>
+
+</div>
+
+
+<div class="login-form">
+
+    
+    <div style="text-align:center">
+
+        <button id="raiseup" class="btn btn-primary btn-lg">Raise Up</button>
+
+    </div>
+
+
+    <div style="text-align:center">
+
+        <button id='putdown' class="btn btn-primary btn-lg">Put Down</button>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

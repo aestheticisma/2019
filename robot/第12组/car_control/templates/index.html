@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>智能车遥控系统</title>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <style type="text/css">
+
+        #header {
+            
+            color:black;
+            
+            text-align:center;
+
+            font-family: Microsoft JhengHei;
+            
+            padding: 10px;
+
+        }
+
+        h1 {
+
+            font-size: 40px;
+
+        }
+
+
+        #front{
+
+         
+            margin-top: 20px;
+
+
+        }
+
+        
+
+        #stop{
+
+            margin-top: 20px;
+
+            margin-bottom: 20px;
+
+            margin-left: 15px;
+
+            margin-right: 15px;
+
+
+        }
+
+       
+
+        #recurrence{
+
+            margin-top: 40px;
+
+            margin-left: 10px;
+
+            margin-right: 10px;
+
+        }
+
+        #action{
+
+            margin-top: 40px;
+
+        }
+
+        #gestureRecognition{
+
+            margin-top: 40px;
+
+        }
+
+        #carplateRecognition{
+
+            margin-top: 15px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .btn{
+
+             background: #FF8C00;
+
+
+
+            }
+
+    </style>
+
+    <script>
+
+        $(function(){
+
+            $("button").click(function(){
+
+                $.post("/cmd",this.id,function(data,status){});
+
+            });
+
+        });
+
+ 
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="header">
+
+    <h1>智能车遥控系统</h1>
+
+</div>
+
+
+<div class="login-form">
+
+    
+
+    <div style="text-align:center">
+
+        <button id="front" class="btn btn-lg btn-primary glyphicon glyphicon-arrow-up"></button>
+
+    </div>
+
+
+    <div style="text-align:center">
+
+        <button id='leftFront' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-left"></button>
+
+        <button id='stop' class="btn btn-lg btn-primary glyphicon glyphicon-ban-circle"></button>
+
+        <button id='rightFront' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-right"></button>
+
+    </div>
+
+
+    <div style="text-align:center">
+
+        <button id='rear' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-down"></button>
+
+    </div>
+
+
+    <div style="text-align:center">
+
+        <button id='action' class="btn btn-lg btn-primary glyphicon glyphicon-off"></button>
+
+
+        <button id='gestureRecognition' class="btn btn-lg btn-primary glyphicon glyphicon-hand-up" onclick="gesturejump()"></button>
+        <button id='recurrence' class="btn btn-lg btn-primary glyphicon glyphicon-time"></button>
+    </div>
+
+
+    <div style="text-align:center">
+
+        <button id='carplateRecognition' class="btn btn-primary btn-lg" onclick="carstreamingjump()">行车记录仪</button>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+ 
+
+function carstreamingjump(){
+
+ 
+
+window.location.href='/video_feed';
+
+ 
+
+}
+
+
+</script>
+
+
+
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

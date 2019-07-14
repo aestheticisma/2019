@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+ 	   <meta charset="UTF-8">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>行车记录仪系统</title>
+
+     <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+     <script src="http://code.jquery.com/jquery.js"></script>
+
+     <style type="text/css">
+
+         #header {
+
+              background-color:white;
+            
+              color:black;
+            
+              text-align:center;
+
+              font-family: Microsoft JhengHei;
+            
+              padding: 10px;
+
+         }
+ 
+         h1 {
+
+              font-size: 40px;
+
+         }
+
+         #screen{
+
+         	margin-top: 20px;
+
+         }
+
+         #goback{
+
+          margin-top: 30px;
+
+         }
+
+         .btn{
+
+             background: #008CBA;
+
+            }
+
+     </style>
+
+  </head>
+
+  <body>
+
+     <div id="header">
+
+         <h1>行车记录仪系统</h1>
+
+     </div>
+
+     <div id="container" class="container">
+
+     	  <div style="text-align:center">
+    
+           <img id="screen" src="{{ url_for('video_feed') }}"><img>
+
+        </div>
+
+     </div>
+
+
+     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     
+
+  </body>
+
+</html>

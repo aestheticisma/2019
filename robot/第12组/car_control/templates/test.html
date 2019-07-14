@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>智能车遥控系统</title>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <style type="text/css">
+
+        #header {
+
+            background-color:white;
+            
+            color:black;
+            
+            text-align:center;
+
+            font-family: Microsoft JhengHei;
+            
+            padding: 10px;
+
+        }
+
+        h1 {
+
+            font-size: 40px;
+
+        }
+
+
+        #front{
+
+            margin-left: 10px;
+
+            margin-right: 10px;
+
+            margin-top: 30px;
+
+
+        }
+
+        #leftFront{
+
+            margin-top: 30px;
+
+        }
+
+        #rightFront{
+
+            margin-top:30px;
+
+        }
+
+        #stop{
+
+            margin-top: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+        #rear{
+
+            margin-left: 10px;
+
+            margin-right: 10px;
+
+        }
+
+        .btn{
+
+             background: #008CBA;
+
+            }
+
+    </style>
+
+    <script>
+
+        $(function(){
+
+            $("button").click(function(){
+
+                $.post("/cmd",this.id,function(data,status){});
+
+            });
+
+        });
+
+ 
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="header">
+
+   <h1>智能车遥控系统</h1>
+
+</div>
+
+
+<div id="container" class="container">
+
+    
+
+    <div style="text-align:center">
+
+        <button id='leftFront' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-left"></button>
+
+        <button id="front" class="btn btn-lg btn-primary glyphicon glyphicon-arrow-up"></button>
+
+        <button id='rightFront' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-right"></button>
+
+    </div>
+
+    <div style="text-align:center">
+
+        <button id='stop' class="btn btn-lg btn-primary glyphicon glyphicon-ban-circle"></button>
+
+        
+    </div>
+
+    <div style="text-align:center">
+
+        <button id='leftRear' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-left"></button>
+
+        <button id='rear' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-down"></button>
+
+        <button id='rightRear' class="btn btn-lg btn-primary glyphicon glyphicon-arrow-right"></button>
+
+
+    </div>
+
+   
+
+</div>
+
+ 
+
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
